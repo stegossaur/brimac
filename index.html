@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Presença Global</title>
+
+  <!-- CSS do site -->
+  <link rel="stylesheet" href="/static/css/index.css">
+  
+  <!-- CSS do Leaflet -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet">
+
+</head>
+<body>
+
+    <!-- Navbar -->
+    <div class="navbar">
+      <span class="logo">BRIMAC</span>
+    
+      <div class="menu-center">
+        <a href="/" data-i18n="menu_inicio">Início</a>
+        <a href="/produtos.html" data-i18n="menu_produtos">Produtos</a>
+        <a href="/catalogos.html" data-i18n="menu_catalogos">Catálogos</a>
+      </div>
+      
+    
+      <div class="lang">
+        <button class="lang-btn active" onclick="setLanguage('pt')">PT</button>
+        <div class="divider"></div>
+        <button class="lang-btn" onclick="setLanguage('es')">ES</button>
+      </div>
+      
+    </div>
+    
+
+    <div class="banner">
+      <div class="banner-text">
+        <h1>
+          Seu parceiro confiável em <span>comércio internacional</span>
+        </h1>
+        <p>
+          Conectando mercados globais com eficiência, qualidade e confiança.
+        </p>
+      </div>
+    
+      <div class="banner-visual">
+        <div class="banner-image"></div>
+        <div class="banner-circle"></div>
+      </div>
+    </div>
+    
+    
+    
+
+  <section class="map-section">
+    <div class="map-content">
+      <!-- Espaço para texto / título / informações -->
+      <div class="map-text">
+        <h2 data-i18n="map_title">PRESENÇA <span>GLOBAL</span></h2>
+
+        <p data-i18n="map_text">
+          Nosso alcance internacional mostra os países onde a BRIMAC já vendeu seus produtos.
+          Aqui você pode acompanhar nosso crescimento e presença mundial.
+        </p>
+
+      </div>
+  
+      <!-- Mapa à direita -->
+      <div class="map-container">
+        <div id="map"></div>
+      </div>
+    </div>
+  </section>
+
+  <div class="produtos">
+    <div class="produtos-header">
+      <span data-i18n="produtos_nacionais">Produtos somente nacionais</span>
+      <button data-i18n="ver_tudo">Ver tudo</button>
+
+    </div>
+  
+    <div class="produtos-body">
+      <ul>
+        <li>
+          <img src="/static/img/placeholder.png" alt="Imagem do Produto 1">
+          <span class="produto-nome">Produto 1</span>
+          <span class="produto-desc">Descrição breve do produto</span>
+        </li>
+        <li>
+          <img src="/static/img/placeholder.png" alt="Imagem do Produto 1">
+          <span class="produto-nome">Produto 1</span>
+          <span class="produto-desc">Descrição breve do produto</span>
+        </li>
+        <li>
+          <img src="/static/img/placeholder.png" alt="Imagem do Produto 1">
+          <span class="produto-nome">Produto 1</span>
+          <span class="produto-desc">Descrição breve do produto</span>
+        </li>
+        <li>
+          <img src="/static/img/placeholder.png" alt="Imagem do Produto 1">
+          <span class="produto-nome">Produto 1</span>
+          <span class="produto-desc">Descrição breve do produto</span>
+        </li>
+        <li>
+          <img src="/static/img/placeholder.png" alt="Imagem do Produto 1">
+          <span class="produto-nome">Produto 1</span>
+          <span class="produto-desc">Descrição breve do produto</span>
+        </li>
+        
+      </ul>
+    </div>
+  
+    <span class="ano">2025</span>
+  </div>
+
+  <div class="produtos">
+    <div class="produtos-header">
+      <span data-i18n="produtos_internacionais">Produtos internacionais</span>
+      <button data-i18n="ver_tudo">Ver tudo</button>
+
+    </div>
+  
+    <div class="produtos-body">
+      <ul>
+        <li>
+          <img src="/static/img/placeholder.png" alt="Imagem do Produto 1">
+          <span class="produto-nome">Produto 1</span>
+          <span class="produto-desc">Descrição breve do produto</span>
+        </li>
+        <li>
+          <img src="/static/img/placeholder.png" alt="Imagem do Produto 1">
+          <span class="produto-nome">Produto 1</span>
+          <span class="produto-desc">Descrição breve do produto</span>
+        </li>
+        <li>
+          <img src="/static/img/placeholder.png" alt="Imagem do Produto 1">
+          <span class="produto-nome">Produto 1</span>
+          <span class="produto-desc">Descrição breve do produto</span>
+        </li>
+        <li>
+          <img src="/static/img/placeholder.png" alt="Imagem do Produto 1">
+          <span class="produto-nome">Produto 1</span>
+          <span class="produto-desc">Descrição breve do produto</span>
+        </li>
+        <li>
+          <img src="/static/img/placeholder.png" alt="Imagem do Produto 1">
+          <span class="produto-nome">Produto 1</span>
+          <span class="produto-desc">Descrição breve do produto</span>
+        </li>
+    
+      </ul>
+    </div>
+  
+    <span class="ano">2025</span>
+  </div>
+
+  <div class="sobre">
+    <img src="/static/img/placeholder.png" alt="imagwm de sobre nós">
+    <span class="texto-sobre" data-i18n="sobre_texto">
+      A BRIMAC é uma empresa líder no comércio internacional, especializada na exportação
+      de produtos de alta qualidade para diversos mercados ao redor do mundo.
+      Com uma equipe dedicada e uma rede global de parceiros, estamos comprometidos em
+      oferecer soluções eficientes e personalizadas para atender às necessidades dos nossos clientes.
+    </span>
+    
+  </div>
+
+  <footer class="footer">
+    <div class="footer-container">
+  
+        <div class="footer-section">
+          <h3 data-i18n="footer_localizacao">Localização</h3>
+          <p>
+            RSC-453, nº 3432, Km 2<br>
+            Distrito Industrial
+            Venâncio Aires – RS, Brasil
+          </p>
+        </div>
+    
+      <div class="footer-section">
+        <h3 data-i18n="footer_contato">Contato</h3>
+      
+        <div class="contatos">
+          <div class="contato-item">
+            <i class="ri-mail-line"></i>
+            <span>contato@brimac.com</span>
+          </div>
+      
+          <div class="contato-item">
+            <i class="ri-phone-line"></i>
+            <span>(51) 3056-9063</span>
+          </div>
+        </div>
+      </div>
+      
+  
+      <div class="footer-section">
+        <h3 data-i18n="footer_redes">Redes Sociais</h3>
+        <div class="social-icons">
+          <a href="#"><i class="ri-instagram-line"></i>@brimaccomerciointernacional</a>
+          <a href="#"><i class="ri-youtube-line"></i>Brimacbrasil</a>
+        </div>
+      </div>
+  
+    </div>
+  
+    <div class="footer-bottom">
+      <p data-i18n="footer_direitos">
+        &copy; 2025 BRIMAC. Todos os direitos reservados.
+      </p>
+     </div>
+  </footer>
+  
+  
+
+  <!-- JS do Leaflet -->
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <!-- JS personalizado -->
+  <script src="/static/js/script.js" defer></script>
+  <script src="/static/js/index.js"></script>
+
+</body>
+</html>

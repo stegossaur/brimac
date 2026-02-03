@@ -1,0 +1,93 @@
+/* =========================
+   CATÁLOGOS
+========================= */
+
+.catalog-hero {
+  padding: 100px 60px;
+  background: linear-gradient(135deg, #ffffff 55%, #f1f1f1 100%);
+}
+
+.catalog-hero h1 {
+  font-size: 3rem;
+  color: var(--chumbo);
+}
+
+.catalog-hero h1 span {
+  color: var(--vermelho);
+}
+
+.catalog-hero p {
+  margin-top: 20px;
+  max-width: 600px;
+  line-height: 1.6;
+}
+
+/* Grid */
+.catalog-section {
+  padding: 80px 60px;
+}
+
+.catalog-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+}
+
+/* Card */
+.catalog-card {
+    background: #ffffff;
+    border: 1px solid var(--cinza-claro);
+    padding: 30px;
+    text-align: center;
+  
+    /* NOVO */
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+  
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+  }
+  
+  .catalog-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 14px 30px rgba(0, 0, 0, 0.10);
+  }
+  
+
+.pdf-icon {
+  font-size: 3.5rem;
+  color: var(--vermelho);
+  margin-bottom: 20px;
+}
+
+.catalog-card h3 {
+  color: var(--chumbo);
+  margin-bottom: 10px;
+}
+
+.catalog-info {
+  display: block;
+  font-size: 0.85rem;
+  color: #777;
+  margin-bottom: 20px;
+}
+
+/* Botão */
+.btn-download {
+  display: inline-block;
+  background: var(--vermelho);
+  color: #fff;
+  border-radius: 5px;
+  text-decoration: none;
+  padding: 12px 28px;
+  font-weight: 600;
+}
+
+.btn-download:hover {
+  background: #9e1f1f;
+}
+
+/* Menu ativo */
+.menu-center a.active {
+  color: var(--vermelho);
+  font-weight: 600;
+}

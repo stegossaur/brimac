@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Catálogos | BRIMAC</title>
+
+  <link rel="stylesheet" href="/static/css/catalogo.css">
+  <link rel="stylesheet" href="/static/css/index.css">
+
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <div class="navbar">
+    <span class="logo">BRIMAC</span>
+
+    <div class="menu-center">
+        <div class="menu-center">
+            <a href="/index.html" data-i18n="menu_inicio">Início</a>
+            <a href="/produtos.html" data-i18n="menu_produtos">Produtos</a>
+            <a href="/catalogos.html" data-i18n="menu_catalogos">Catálogos</a>
+        </div>     
+    </div>
+
+    <div class="lang">
+      <button class="lang-btn active" onclick="setLanguage('pt')">PT</button>
+      <div class="divider"></div>
+      <button class="lang-btn" onclick="setLanguage('es')">ES</button>
+    </div>
+  </div>
+
+  <!-- Hero -->
+  <section class="catalog-hero">
+    <h1>Catálogos <span>BRIMAC</span></h1>
+    <p>
+      Acesse nossos catálogos técnicos com especificações completas
+      para mercados nacional e internacional.
+    </p>
+  </section>
+
+  <!-- Catálogos -->
+  <section class="catalog-section">
+
+    <div class="catalog-grid">
+
+      <!-- Card -->
+      <div class="catalog-card">
+        <i class="ri-file-pdf-2-line pdf-icon"></i>
+        <h3>Catálogo Cefaz Fogões</h3>
+        <span class="catalog-info">Português • 2025</span>
+        <a href="/static/img/catalogo Cefaz fogões..pdf" target="_blank" class="btn-download">
+          Baixar PDF
+        </a>
+      </div>
+
+      <div class="catalog-card">
+        <i class="ri-file-pdf-2-line pdf-icon"></i>
+        <h3>Catálogo Internacional</h3>
+        <span class="catalog-info">Espanhol • 2025</span>
+        <a href="/static/img/Catalogo importação Brimac.pdf" target="_blank" class="btn-download">
+          Baixar PDF
+        </a>
+      </div>
+
+      <div class="catalog-card">
+        <i class="ri-file-pdf-2-line pdf-icon"></i>
+        <h3>Catálogo Saro </h3>
+        <span class="catalog-info">Inglês • 2025</span>
+        <a href="/static/img/Catálogo Saro 2025 (Ingles).pdf" target="_blank" class="btn-download">
+          Baixar PDF
+        </a>
+      </div>
+
+    </div>
+
+  </section>
+
+  <footer class="footer">
+    <div class="footer-container">
+  
+        <div class="footer-section">
+          <h3 data-i18n="footer_localizacao">Localização</h3>
+          <p>
+            RSC-453, nº 3432, Km 2<br>
+            Distrito Industrial
+            Venâncio Aires – RS, Brasil
+          </p>
+        </div>
+    
+      <div class="footer-section">
+        <h3 data-i18n="footer_contato">Contato</h3>
+      
+        <div class="contatos">
+          <div class="contato-item">
+            <i class="ri-mail-line"></i>
+            <span>contato@brimac.com</span>
+          </div>
+      
+          <div class="contato-item">
+            <i class="ri-phone-line"></i>
+            <span>(51) 3056-9063</span>
+          </div>
+        </div>
+      </div>
+      
+  
+      <div class="footer-section">
+        <h3 data-i18n="footer_redes">Redes Sociais</h3>
+        <div class="social-icons">
+          <a href="#"><i class="ri-instagram-line"></i>@brimaccomerciointernacional</a>
+          <a href="#"><i class="ri-youtube-line"></i>Brimacbrasil</a>
+        </div>
+      </div>
+  
+    </div>
+  
+    <div class="footer-bottom">
+      <p data-i18n="footer_direitos">
+        &copy; 2025 BRIMAC. Todos os direitos reservados.
+      </p>
+     </div>
+  </footer>
+  
+
+  <script src="/static/js/script.js"></script>
+</body>
+</html>
