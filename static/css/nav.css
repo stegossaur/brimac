@@ -1,0 +1,147 @@
+/* =========================
+   VARIÁVEIS
+========================= */
+
+:root {
+    --vermelho: #B32626;
+    --cinza: #4A4A4A;
+    --branco: #F8F9FA;
+    --chumbo: #222222;
+    --cinza-claro: #e5e5e5;
+    --preto: #151515;
+}
+
+
+/* =========================
+   NAVBAR
+========================= */
+
+.navbar {
+    position: relative;
+
+    width: 100%;
+
+    min-height: 100px;
+
+    padding: 18px 60px;
+
+    display: flex;
+    align-items: center;
+
+    background: #ffffff;
+
+    border-bottom: 1px solid var(--cinza-claro);
+}
+
+
+/* =========================
+   LOGO
+========================= */
+
+.logo {
+    background-image: url('/static/img/logo.jpeg');
+
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+
+    display: inline-block;
+
+    width: 200px;
+    height: 100px;
+}
+
+
+/* =========================
+   MENU CENTRAL
+========================= */
+
+.menu-center {
+    position: absolute;
+
+    left: 50%;
+    top: 50%;
+
+    transform: translate(-50%, -50%);
+
+    display: flex;
+    align-items: center;
+
+    gap: 35px;
+
+    white-space: nowrap;
+}
+
+
+/* =========================
+   LINKS
+========================= */
+
+.menu-center a {
+    position: relative;
+
+    margin: 0;
+
+    text-decoration: none;
+
+    font-weight: 500;
+
+    color: var(--cinza);
+
+    transition: color 0.3s ease;
+}
+
+
+/* =========================
+   PÁGINA ATIVA
+========================= */
+
+.menu-center a.active {
+    color: var(--vermelho);
+
+    font-weight: 600;
+}
+
+
+/* =========================
+   UNDERLINE
+========================= */
+
+.menu-center a.active::after {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    bottom: -8px;
+
+    width: 100%;
+    height: 2px;
+
+    background: var(--vermelho);
+
+    border-radius: 2px;
+}
+
+
+/* =========================
+   HOVER
+========================= */
+
+.menu-center a:hover {
+    color: var(--vermelho);
+}
+
+
+/* =========================
+   DIVISOR
+========================= */
+
+.divider {
+    width: 1px;
+    height: 18px;
+
+    margin: 0 5px;
+
+    background: #ccc;
+}

@@ -1,0 +1,352 @@
+/* =========================
+   ANIMAÇÕES
+========================= */
+
+/* 1º - Título */
+.about-content h1 {
+    opacity: 0;
+    animation: titleIn 0.8s ease forwards;
+    animation-delay: 0.2s;
+}
+
+/* 2º - Texto */
+.about-text {
+    opacity: 0;
+    animation: fadeUp 0.8s ease forwards;
+    animation-delay: 0.6s;
+}
+
+/* 3º - Label */
+.about-label {
+    opacity: 0;
+    animation: fadeUp 0.8s ease forwards;
+    animation-delay: 1s;
+}
+
+@keyframes titleIn {
+    from {
+        opacity: 0;
+        transform: translateX(-40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes titleIn {
+    from {
+        opacity: 0;
+        transform: translateX(-40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ================================
+   CONTAINER PRINCIPAL
+================================ */
+
+.quem-somos {
+    padding: 60px 10%;
+
+    position: relative;
+    overflow: hidden;
+
+    display: flex;
+    align-items: center;
+}
+
+
+/* ================================
+   CONTEÚDO
+================================ */
+
+.about-content {
+    width: 100%;
+
+    position: relative;
+    z-index: 2;
+}
+
+
+/* ================================
+   LABEL
+================================ */
+
+.about-label {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+    color: var(--vermelho);
+
+    font-size: 20px;
+    font-weight: 700;
+
+    letter-spacing: 4px;
+}
+
+.about-label span {
+    width: 35px;
+    height: 2px;
+
+    background: var(--vermelho);
+}
+
+
+/* ================================
+   TÍTULO
+================================ */
+
+h1 {
+    max-width: 800px;
+
+    margin-top: 35px;
+
+    font-family: 'Space Grotesk', sans-serif;
+
+    font-size: 70px;
+    line-height: 0.9;
+
+    letter-spacing: -5px;
+}
+
+h1 span {
+    color: var(--vermelho);
+}
+
+
+/* ================================
+   TEXTO
+================================ */
+
+.about-text {
+    max-width: 720px;
+
+    margin-top: 65px;
+    margin-left: 10%;
+
+    position: relative;
+}
+
+
+/* Linha vermelha lateral */
+
+.about-text::before {
+    content: "";
+
+    width: 3px;
+    height: 100%;
+
+    position: absolute;
+
+    left: -30px;
+    top: 0;
+
+    background: var(--vermelho);
+}
+
+
+.about-text p {
+    margin-bottom: 22px;
+
+    color: var(--cinza);
+
+    font-size: 18px;
+    line-height: 1.8;
+}
+
+
+/* Primeiro parágrafo em destaque */
+
+.about-text p:first-child {
+    color: var(--preto);
+
+    font-size: 23px;
+    font-weight: 600;
+
+    line-height: 1.5;
+}
+
+
+/* Remove espaço extra do último parágrafo */
+
+.about-text p:last-child {
+    margin-bottom: 0;
+}
+
+
+
+/* ================================
+   RESPONSIVO
+================================ */
+
+@media (max-width: 1000px) {
+
+    .quem-somos {
+        padding: 90px 7%;
+    }
+
+    h1 {
+        font-size: 70px;
+    }
+
+    .about-text {
+        margin-left: 7%;
+    }
+
+}
+
+
+/* ================================
+   MOBILE
+================================ */
+
+@media (max-width: 768px) {
+
+    .quem-somos {
+        min-height: 100vh;
+
+        padding: 70px 8%;
+
+        align-items: flex-start;
+    }
+
+
+    .about-label {
+        font-size: 15px;
+
+        letter-spacing: 3px;
+    }
+
+
+    .about-label span {
+        width: 25px;
+    }
+
+
+    h1 {
+        margin-top: 28px;
+
+        font-size: 58px;
+
+        letter-spacing: -4px;
+    }
+
+
+    .about-text {
+        margin-top: 50px;
+        margin-left: 25px;
+    }
+
+
+    .about-text p {
+        font-size: 16px;
+
+        line-height: 1.7;
+    }
+
+
+    .about-text p:first-child {
+        font-size: 20px;
+    }
+
+
+    .about-text::before {
+        left: -18px;
+    }
+
+
+    /* Círculos menores no mobile */
+
+    .circle-one {
+        width: 350px;
+        height: 350px;
+
+        right: -180px;
+        top: -100px;
+    }
+
+
+    .circle-two {
+        width: 260px;
+        height: 260px;
+
+        right: -100px;
+        top: -10px;
+    }
+
+
+    .bottom-decoration {
+        left: 8%;
+        bottom: 30px;
+    }
+
+}
+
+
+/* ================================
+   TELAS MUITO PEQUENAS
+================================ */
+
+@media (max-width: 480px) {
+
+    .quem-somos {
+        padding: 60px 7%;
+    }
+
+
+    .about-label {
+        font-size: 12px;
+
+        letter-spacing: 2px;
+    }
+
+
+    h1 {
+        font-size: 48px;
+
+        letter-spacing: -3px;
+    }
+
+
+    .about-text {
+        margin-left: 20px;
+    }
+
+
+    .about-text p:first-child {
+        font-size: 18px;
+    }
+
+
+    .about-text p {
+        font-size: 15px;
+    }
+
+}

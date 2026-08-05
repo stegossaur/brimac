@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Presença Global</title>
+
+  <!-- CSS do site -->
+  <link rel="stylesheet" href="./static/css/style.css">
+  <link rel="stylesheet" href="./static/css/nav.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+
+
+  <!-- CSS do Leaflet -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+  <!-- Navbar -->
+  <div class="navbar">
+    <span class="logo"></span>
+
+    <div class="menu-center">
+      <a href="./">Início</a>
+      <a href="./quem_somos.html">Quem somos</a>
+      <a href="./produtos.html">Produtos</a>
+      <a href="./catalogos.html">Downloads</a>
+    </div>
+  </div>
+
+
+  <div class="banner">
+    <div class="banner-text">
+      <h1>
+        <span>Solução<br></span> e <span>eficiência</span><br> para a <br>sua cozinha
+      </h1>
+    </div>
+
+    <div class="banner-visual">
+      <img src="static/img/RC1_0064.JPG" alt="Produto" class="banner-image">
+    </div>
+
+    <!-- Elementos decorativos -->
+    <div class="decorative-circle circle-one"></div>
+    <div class="decorative-circle circle-two"></div>
+
+
+  </div>
+
+
+  <section class="produtos-swiper">
+
+    <h2>Nossos Produtos</h2>
+
+    <div class="swiper meuCarrossel">
+
+      <div class="swiper-wrapper">
+
+        <div class="swiper-slide">
+          <img src="static/img/RC1_0004.JPG" alt="">
+        </div>
+
+        <div class="swiper-slide">
+          <img src="static/img/RC1_0025.JPG" alt="">
+        </div>
+
+        <div class="swiper-slide">
+          <img src="static/img/RC1_0058.jpg" alt="">
+        </div>
+
+        <div class="swiper-slide">
+          <img src="static/img/RC1_0073.jpg" alt="">
+        </div>
+
+      </div>
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+    </div>
+    <div class="produtos-btn">
+    <a href="./produtos.html" class="btn-ver-produtos">Ver produtos</a>
+</div>
+  </section>
+
+
+  <div class="cards-brimac">
+    <div class="card">
+      <div class="card-header">Qualidade</div>
+      <div class="card-body">
+        <p>
+          Equipamentos de alta qualidade, 
+          desenvolvidos para oferecer desempenho, durabilidade e 
+          segurança no uso profissional.
+        </p>
+        <a href="https://wa.me/5555999999999" class="btn-saiba-mais" target="_blank">
+        Saiba mais →
+        </a>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header">Experiência</div>
+      <div class="card-body">
+        <p>
+          Há mais de 12 anos no mercado, 
+          a BRIMAC reúne experiência e conhecimento para 
+          oferecer as melhores soluções em equipamentos gastronômicos.
+        </p>
+        <a href="https://wa.me/5555999999999" class="btn-saiba-mais" target="_blank">
+        Saiba mais →
+        </a>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header">Confiabilidade</div>
+      <div class="card-body">
+        <p>
+          Selecionamos rigorosamente
+          nossos fornecedores internacionais para garantir 
+          produtos confiáveis e com excelente performance.
+        </p>
+        <a href="https://wa.me/5555999999999" class="btn-saiba-mais" target="_blank">
+        Saiba mais →
+        </a>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header">Compromisso</div>
+      <div class="card-body">
+        <p>
+          Nosso compromisso 
+          é entregar equipamentos que contribuam para a eficiência, 
+          qualidade e crescimento do seu negócio.
+        </p>
+        <a href="https://wa.me/555130569063" class="btn-saiba-mais" target="_blank">
+        Saiba mais →
+        </a>
+      </div>
+    </div>
+
+  </div>
+
+
+
+  <footer class="footer">
+    <div class="footer-container">
+
+      <div class="footer-section">
+        <h3 data-i18n="footer_localizacao">Localização</h3>
+        <p>
+          RSC-453, nº 3432, Km 2<br>
+          Distrito Industrial
+          Venâncio Aires – RS, Brasil
+        </p>
+      </div>
+
+      <div class="footer-section">
+        <h3 data-i18n="footer_contato">Contato</h3>
+
+        <div class="contatos">
+          <div class="contato-item">
+            <i class="ri-mail-line"></i>
+            <span>contato@brimac.com</span>
+          </div>
+
+          <div class="contato-item">
+            <i class="ri-phone-line"></i>
+            <span>(51) 3056-9063</span>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="footer-section">
+        <h3 data-i18n="footer_redes">Redes Sociais</h3>
+        <div class="social-icons">
+          <a href="#"><i class="ri-instagram-line"></i>@brimaccomerciointernacional</a>
+          <a href="#"><i class="ri-youtube-line"></i>Brimacbrasil</a>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <p data-i18n="footer_direitos">
+        &copy; 2025 BRIMAC. Todos os direitos reservados.
+      </p>
+    </div>
+  </footer>
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <!-- JS personalizado -->
+  <script src="./static/js/script.js" defer></script>
+  <script src="./static/js/index.js"></script>
+
+</body>
+
+</html>
