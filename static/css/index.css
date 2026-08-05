@@ -1,9 +1,8 @@
-
-
 @keyframes pageFadeIn {
   from {
     opacity: 0.96;
   }
+
   to {
     opacity: 1;
   }
@@ -13,6 +12,34 @@
 /* =========================
    BANNER / HERO
 ========================= */
+
+/* BRIMAC como assinatura */
+.banner-text h1 .brand-highlight {
+    color: var(--vermelho);
+
+    font-size: 2rem;
+    letter-spacing: 8px;
+    font-weight: 900;
+
+    display: inline-block;
+
+    margin-bottom: 15px;
+}
+
+
+.banner-text h1 .brand-highlight::after {
+    content: "";
+    display: block;
+
+    width: 70%;
+    height: 3px;
+
+    background: var(--vermelho);
+
+    margin-top: 8px;
+}
+
+
 .banner {
   position: relative;
   min-height: 70vh;
@@ -28,24 +55,26 @@
 }
 
 .banner-visual {
-    width: 50%;
-    display: flex;
-    justify-content: flex-end; /* joga para a direita */
-    align-items: center;
-    padding-right: 100px; /* afasta da borda direita */
+  width: 50%;
+  display: flex;
+  justify-content: flex-end;
+  /* joga para a direita */
+  align-items: center;
+  padding-right: 100px;
+  /* afasta da borda direita */
 }
 
 .banner-image {
-    width: 650px;
-    max-width: 100%;
-    height: auto;
-    object-fit: contain;
+  width: 650px;
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
 
-    border-radius: 20px;
-    opacity: 1 !important;
-    filter: none;
-    position: relative;
-    z-index: 10;
+  border-radius: 20px;
+  opacity: 1 !important;
+  filter: none;
+  position: relative;
+  z-index: 10;
 }
 
 .banner-circle {
@@ -56,21 +85,23 @@
   /* arco à esquerda, lado reto à direita */
   border-radius: 160px 0 0 160px;
 
-  margin-left: -260px; /* cola na imagem */
+  margin-left: -260px;
+  /* cola na imagem */
   z-index: 1;
 }
 
 
 /* Monitores Full HD e maiores */
 @media (min-width: 1400px) {
-    .banner-image {
-        width: 900px;
-        transform: translateX(-100px); /* move para a esquerda */
-    }
+  .banner-image {
+    width: 900px;
+    transform: translateX(-100px);
+    /* move para a esquerda */
+  }
 
-    .banner-visual {
-        padding-right: 120px;
-    }
+  .banner-visual {
+    padding-right: 120px;
+  }
 }
 
 @media (max-width: 900px) {
@@ -138,7 +169,7 @@
   top: -80px;
   width: 420px;
   height: 420px;
-  background: radial-gradient(circle, rgba(179,38,38,0.15), transparent 70%);
+  background: radial-gradient(circle, rgba(179, 38, 38, 0.15), transparent 70%);
 
   opacity: 0;
   transform: scale(0.9);
@@ -154,6 +185,7 @@
     opacity: 0;
     transform: translateY(8px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -175,11 +207,13 @@
 }
 
 .banner-text h1 {
-  font-size: 3.4rem;
-  font-weight: 800;
-  color: var(--chumbo);
-  max-width: 760px;
-  line-height: 1.2;
+    font-size: 3.5rem;
+    font-weight: 800;
+
+    line-height: 1.35; /* aumenta o espaço entre linhas */
+    letter-spacing: -2px;
+
+    color: var(--chumbo);
 }
 
 .banner-text h1 span {
@@ -218,162 +252,163 @@
     font-size: 2.4rem;
   }
 }
+
 /* =========================
    SEÇÃO PRODUTOS
 ========================= */
 
 .produtos-swiper {
-    padding: 80px 8%;
+  padding: 80px 8%;
 }
 
 .produtos-swiper h2 {
-    text-align: center;
-    font-size: 2.2rem;
-    color: #222;
-    margin-bottom: 50px;
-    font-weight: 700;
+  text-align: center;
+  font-size: 2.2rem;
+  color: #222;
+  margin-bottom: 50px;
+  font-weight: 700;
 }
 
 /* Carrossel */
 .meuCarrossel {
-    padding: 30px 50px;
+  padding: 30px 50px;
 }
 
 /* Slide */
 .meuCarrossel .swiper-slide {
-    padding: 20px;
-    box-sizing: border-box;
-    text-align: center;
-    transition: .3s;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  padding: 20px;
+  box-sizing: border-box;
+  text-align: center;
+  transition: .3s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 /* Imagem */
 .meuCarrossel .swiper-slide img {
-    width: 100%;
-    max-width: 450px;  
-    height: 400px;      
-    object-fit: contain;
-    margin-bottom: 20px;
-    border-radius: 14px;
-    padding: 15px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
-    transition: transform .3s ease, box-shadow .3s ease;
+  width: 100%;
+  max-width: 450px;
+  height: 400px;
+  object-fit: contain;
+  margin-bottom: 20px;
+  border-radius: 14px;
+  padding: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  transition: transform .3s ease, box-shadow .3s ease;
 }
 
 /* Hover na imagem */
 .meuCarrossel .swiper-slide:hover img {
-    transform: translateY(-6px);
-    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.22);
+  transform: translateY(-6px);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.22);
 }
 
 /* Nome */
 .meuCarrossel .swiper-slide h3 {
-    font-size: 1.3rem;
-    color: #222;
-    margin-bottom: 10px;
-    font-weight: 600;
+  font-size: 1.3rem;
+  color: #222;
+  margin-bottom: 10px;
+  font-weight: 600;
 }
 
 /* Descrição */
 .meuCarrossel .swiper-slide p {
-    font-size: .95rem;
-    color: #666;
-    line-height: 1.6;
-    max-width: 250px;
+  font-size: .95rem;
+  color: #666;
+  line-height: 1.6;
+  max-width: 250px;
 }
 
 /* Setas */
 .swiper-button-next,
 .swiper-button-prev {
-    color: #B32626;
+  color: #B32626;
 }
 
 .swiper-button-next::after,
 .swiper-button-prev::after {
-    font-size: 26px;
+  font-size: 26px;
 }
 
 /* Bolinhas (caso utilize paginação) */
 .swiper-pagination {
-    margin-top: 25px;
-    position: relative;
+  margin-top: 25px;
+  position: relative;
 }
 
 .swiper-pagination-bullet {
-    background: #B32626;
-    opacity: .4;
+  background: #B32626;
+  opacity: .4;
 }
 
 .swiper-pagination-bullet-active {
-    opacity: 1;
+  opacity: 1;
 }
 
 .produtos-btn {
-    margin-top: 40px;
-    display: flex;
-    justify-content: center;
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
 }
 
 .btn-ver-produtos {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 
-    padding: 16px 40px;
+  padding: 16px 40px;
 
-    background: #B32626;
-    color: #fff;
-    text-decoration: none;
-    font-size: 1rem;
-    font-weight: 600;
+  background: #B32626;
+  color: #fff;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 600;
 
-    border-radius: 50px;
-    transition: all .3s ease;
+  border-radius: 50px;
+  transition: all .3s ease;
 }
 
 .btn-ver-produtos:hover {
-    background: #8f1d1d;
-    transform: translateY(-3px);
-    box-shadow: 0 10px 25px rgba(179, 38, 38, .3);
+  background: #8f1d1d;
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(179, 38, 38, .3);
 }
 
 
 /* Responsivo */
 @media (max-width: 768px) {
 
-    .produtos-swiper {
-        padding: 60px 20px;
-    }
+  .produtos-swiper {
+    padding: 60px 20px;
+  }
 
-    .produtos-swiper h2 {
-        font-size: 1.8rem;
-        margin-bottom: 40px;
-    }
+  .produtos-swiper h2 {
+    font-size: 1.8rem;
+    margin-bottom: 40px;
+  }
 
-    .meuCarrossel {
-        padding: 20px 35px;
-    }
+  .meuCarrossel {
+    padding: 20px 35px;
+  }
 
-    .meuCarrossel .swiper-slide {
-        padding: 10px;
-    }
+  .meuCarrossel .swiper-slide {
+    padding: 10px;
+  }
 
-    .meuCarrossel .swiper-slide img {
-        max-width: 170px;
-        height: 140px;
-        padding: 12px;
-    }
+  .meuCarrossel .swiper-slide img {
+    max-width: 170px;
+    height: 140px;
+    padding: 12px;
+  }
 
-    .meuCarrossel .swiper-slide h3 {
-        font-size: 1.1rem;
-    }
+  .meuCarrossel .swiper-slide h3 {
+    font-size: 1.1rem;
+  }
 
-    .meuCarrossel .swiper-slide p {
-        font-size: .9rem;
-    }
+  .meuCarrossel .swiper-slide p {
+    font-size: .9rem;
+  }
 }
 
 
@@ -382,81 +417,84 @@
 ========================= */
 
 .cards-brimac {
-    max-width: 1500px;
-    margin: 100px auto;
-    padding: 0 5%;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 40px;
+  max-width: 1500px;
+  margin: 100px auto;
+  padding: 0 5%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
 }
 
 .cards-brimac .card {
-    background: #fff;
-    border-radius: 20px;
-    min-height: 420px; /* antes 320px */
-    overflow: hidden;
-    border: 1px solid #ececec;
-    box-shadow: 0 12px 35px rgba(0,0,0,.08);
-    transition: .35s ease;
+  background: #fff;
+  border-radius: 20px;
+  min-height: 420px;
+  /* antes 320px */
+  overflow: hidden;
+  border: 1px solid #ececec;
+  box-shadow: 0 12px 35px rgba(0, 0, 0, .08);
+  transition: .35s ease;
 
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 
 .cards-brimac .card::before {
-    content: "";
-    position: absolute;
-    inset: 0 auto auto 0;
-    width: 100%;
-    height: 5px;
-    background: #B32626;
+  content: "";
+  position: absolute;
+  inset: 0 auto auto 0;
+  width: 100%;
+  height: 5px;
+  background: #B32626;
 }
 
 .cards-brimac .card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 18px 40px rgba(179, 38, 38, .18);
+  transform: translateY(-8px);
+  box-shadow: 0 18px 40px rgba(179, 38, 38, .18);
 }
 
 .cards-brimac .card-header {
-    padding: 35px 30px 20px;
-    color: #B32626;
-    font-size: 1.4rem; /* antes 1.4rem */
-    font-weight: 700;
+  padding: 35px 30px 20px;
+  color: #B32626;
+  font-size: 1.4rem;
+  /* antes 1.4rem */
+  font-weight: 700;
 }
 
 .cards-brimac .card-body {
-    flex: 1;
-    padding: 0 30px 35px;
-    display: flex;
-    flex-direction: column;
+  flex: 1;
+  padding: 0 30px 35px;
+  display: flex;
+  flex-direction: column;
 }
 
 .cards-brimac .card-body p {
-    font-size: 1.05rem; /* antes .96rem */
-    line-height: 1.9;
-    color: #555;
+  font-size: 1.05rem;
+  /* antes .96rem */
+  line-height: 1.9;
+  color: #555;
 }
 
 .btn-saiba-mais {
-    margin-top: auto;
-    align-self: flex-end;
+  margin-top: auto;
+  align-self: flex-end;
 
-    color: #B32626;
-    text-decoration: none;
-    font-weight: 600;
-    font-size: .95rem;
+  color: #B32626;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: .95rem;
 
-    display: inline-flex;
-    align-items: center;
-    gap: 6px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
 
-    transition: .3s;
+  transition: .3s;
 }
 
 .btn-saiba-mais:hover {
-    color: #8f1d1d;
-    transform: translateX(5px);
+  color: #8f1d1d;
+  transform: translateX(5px);
 }
 
 
@@ -465,10 +503,10 @@
 
 @media (max-width: 1024px) {
 
-    .cards-brimac {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 25px;
-    }
+  .cards-brimac {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+  }
 
 }
 
@@ -476,15 +514,14 @@
 
 @media (max-width: 768px) {
 
-    .cards-brimac {
-        grid-template-columns: 1fr;
-        padding: 0 20px;
-        margin: 60px auto;
-    }
+  .cards-brimac {
+    grid-template-columns: 1fr;
+    padding: 0 20px;
+    margin: 60px auto;
+  }
 
-    .cards-brimac .card-header {
-        font-size: 1.3rem;
-    }
+  .cards-brimac .card-header {
+    font-size: 1.3rem;
+  }
 
 }
-
