@@ -39,7 +39,7 @@
 ========================= */
 
 .logo {
-    background-image: url('./static/img/logo.jpeg');
+    background-image: url('../img/logo.jpeg');
 
     background-repeat: no-repeat;
     background-size: contain;
