@@ -2,21 +2,18 @@
    ANIMAÇÕES
 ========================= */
 
-/* 1º - Título */
 .about-content h1 {
     opacity: 0;
     animation: titleIn 0.8s ease forwards;
     animation-delay: 0.2s;
 }
 
-/* 2º - Texto */
 .about-text {
     opacity: 0;
     animation: fadeUp 0.8s ease forwards;
     animation-delay: 0.6s;
 }
 
-/* 3º - Label */
 .about-label {
     opacity: 0;
     animation: fadeUp 0.8s ease forwards;
@@ -28,6 +25,7 @@
         opacity: 0;
         transform: translateX(-40px);
     }
+
     to {
         opacity: 1;
         transform: translateX(0);
@@ -39,40 +37,23 @@
         opacity: 0;
         transform: translateY(25px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
     }
 }
 
-@keyframes titleIn {
-    from {
-        opacity: 0;
-        transform: translateX(-40px);
-    }
-    to {
-        opacity: 1;
-        transform: translateX(0);
-    }
-}
-
-@keyframes fadeUp {
-    from {
-        opacity: 0;
-        transform: translateY(25px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
 
 /* ================================
    CONTAINER PRINCIPAL
 ================================ */
 
 .quem-somos {
-    padding: 60px 10%;
+    width: 100%;
+    box-sizing: border-box;
+
+    padding: clamp(60px, 8vw, 110px) clamp(25px, 10vw, 150px);
 
     position: relative;
     overflow: hidden;
@@ -88,6 +69,9 @@
 
 .about-content {
     width: 100%;
+    max-width: 1400px;
+
+    margin: 0 auto;
 
     position: relative;
     z-index: 2;
@@ -101,19 +85,21 @@
 .about-label {
     display: flex;
     align-items: center;
-    gap: 15px;
+    gap: clamp(10px, 1.5vw, 15px);
 
     color: var(--vermelho);
 
-    font-size: 20px;
+    font-size: clamp(13px, 1.4vw, 20px);
     font-weight: 700;
 
-    letter-spacing: 4px;
+    letter-spacing: clamp(2px, 0.35vw, 4px);
 }
 
 .about-label span {
-    width: 35px;
+    width: clamp(25px, 3vw, 35px);
     height: 2px;
+
+    flex-shrink: 0;
 
     background: var(--vermelho);
 }
@@ -123,20 +109,21 @@
    TÍTULO
 ================================ */
 
-h1 {
-    max-width: 800px;
+.about-content h1 {
+    max-width: 900px;
 
-    margin-top: 35px;
+    margin-top: clamp(25px, 3vw, 35px);
+    margin-bottom: 0;
 
     font-family: 'Space Grotesk', sans-serif;
 
-    font-size: 70px;
-    line-height: 0.9;
+    font-size: clamp(48px, 6vw, 80px);
+    line-height: 0.95;
 
-    letter-spacing: -5px;
+    letter-spacing: clamp(-4px, -0.35vw, -5px);
 }
 
-h1 span {
+.about-content h1 span {
     color: var(--vermelho);
 }
 
@@ -146,10 +133,10 @@ h1 span {
 ================================ */
 
 .about-text {
-    max-width: 720px;
+    width: min(720px, 80%);
 
-    margin-top: 65px;
-    margin-left: 10%;
+    margin-top: clamp(45px, 6vw, 65px);
+    margin-left: clamp(25px, 10%, 140px);
 
     position: relative;
 }
@@ -165,58 +152,62 @@ h1 span {
 
     position: absolute;
 
-    left: -30px;
+    left: clamp(-30px, -3vw, -20px);
     top: 0;
 
     background: var(--vermelho);
 }
 
 
+/* Parágrafos */
+
 .about-text p {
     margin-bottom: 22px;
 
     color: var(--cinza);
 
-    font-size: 18px;
+    font-size: clamp(15px, 1.3vw, 18px);
     line-height: 1.8;
 }
 
 
-/* Primeiro parágrafo em destaque */
+/* Primeiro parágrafo */
 
 .about-text p:first-child {
     color: var(--preto);
 
-    font-size: 23px;
+    font-size: clamp(18px, 1.6vw, 23px);
     font-weight: 600;
 
     line-height: 1.5;
 }
 
 
-/* Remove espaço extra do último parágrafo */
+/* Último parágrafo */
 
 .about-text p:last-child {
     margin-bottom: 0;
 }
 
 
-
 /* ================================
-   RESPONSIVO
+   TABLETS
 ================================ */
 
-@media (max-width: 1000px) {
+@media (max-width: 900px) {
 
     .quem-somos {
-        padding: 90px 7%;
+        padding: 70px 7%;
     }
 
-    h1 {
-        font-size: 70px;
+    .about-content h1 {
+        max-width: 750px;
+
+        font-size: clamp(48px, 8vw, 68px);
     }
 
     .about-text {
+        width: 85%;
         margin-left: 7%;
     }
 
@@ -224,24 +215,23 @@ h1 span {
 
 
 /* ================================
-   MOBILE
+   CELULAR
 ================================ */
 
-@media (max-width: 768px) {
+@media (max-width: 600px) {
 
     .quem-somos {
         min-height: 100vh;
 
-        padding: 70px 8%;
+        padding: 60px 8%;
 
         align-items: flex-start;
     }
 
 
     .about-label {
-        font-size: 15px;
-
-        letter-spacing: 3px;
+        font-size: 13px;
+        letter-spacing: 2px;
     }
 
 
@@ -250,30 +240,21 @@ h1 span {
     }
 
 
-    h1 {
+    .about-content h1 {
         margin-top: 28px;
 
-        font-size: 58px;
+        font-size: clamp(42px, 13vw, 58px);
 
-        letter-spacing: -4px;
+        letter-spacing: -3px;
+        line-height: 0.95;
     }
 
 
     .about-text {
+        width: calc(100% - 20px);
+
         margin-top: 50px;
-        margin-left: 25px;
-    }
-
-
-    .about-text p {
-        font-size: 16px;
-
-        line-height: 1.7;
-    }
-
-
-    .about-text p:first-child {
-        font-size: 20px;
+        margin-left: 20px;
     }
 
 
@@ -282,71 +263,60 @@ h1 span {
     }
 
 
-    /* Círculos menores no mobile */
-
-    .circle-one {
-        width: 350px;
-        height: 350px;
-
-        right: -180px;
-        top: -100px;
+    .about-text p {
+        font-size: 16px;
+        line-height: 1.7;
     }
 
 
-    .circle-two {
-        width: 260px;
-        height: 260px;
-
-        right: -100px;
-        top: -10px;
-    }
-
-
-    .bottom-decoration {
-        left: 8%;
-        bottom: 30px;
+    .about-text p:first-child {
+        font-size: 20px;
     }
 
 }
 
 
 /* ================================
-   TELAS MUITO PEQUENAS
+   CELULARES PEQUENOS
 ================================ */
 
-@media (max-width: 480px) {
+@media (max-width: 400px) {
 
     .quem-somos {
-        padding: 60px 7%;
+        padding: 50px 7%;
     }
 
 
     .about-label {
-        font-size: 12px;
-
-        letter-spacing: 2px;
+        font-size: 11px;
+        letter-spacing: 1.5px;
     }
 
 
-    h1 {
-        font-size: 48px;
-
-        letter-spacing: -3px;
+    .about-content h1 {
+        font-size: 43px;
+        letter-spacing: -2.5px;
     }
 
 
     .about-text {
-        margin-left: 20px;
+        margin-left: 18px;
+        margin-top: 40px;
     }
 
 
-    .about-text p:first-child {
-        font-size: 18px;
+    .about-text::before {
+        left: -15px;
     }
 
 
     .about-text p {
         font-size: 15px;
+    }
+
+
+    .about-text p:first-child {
+        font-size: 18px;
     }
 
 }

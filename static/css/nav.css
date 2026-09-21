@@ -82,7 +82,7 @@
 
     margin: 0;
 
-    font-size: 1.2rem;
+    font-size: 1.1rem;
 
     text-decoration: none;
 
@@ -146,4 +146,106 @@
     margin: 0 5px;
 
     background: #ccc;
+}
+
+
+/* =========================
+   RESPONSIVO - TABLET
+========================= */
+
+@media (max-width: 900px) {
+
+    .navbar {
+        min-height: 90px;
+        padding: 15px 30px;
+    }
+
+    .logo {
+        width: 160px;
+        height: 80px;
+    }
+
+    .menu-center {
+        gap: 25px;
+    }
+
+    .menu-center a {
+        font-size: 1rem;
+    }
+}
+
+
+/* =========================
+   RESPONSIVO - CELULAR
+========================= */
+
+@media (max-width: 600px) {
+
+    .navbar {
+        position: relative;
+
+        min-height: auto;
+
+        padding: 15px 20px;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .logo {
+        width: 150px;
+        height: 70px;
+    }
+
+    .menu-center {
+        position: static;
+
+        transform: none;
+
+        width: 100%;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        flex-wrap: wrap;
+
+        gap: 12px 22px;
+    }
+
+    .menu-center a {
+        font-size: 0.95rem;
+    }
+
+    .menu-center a.active::after {
+        bottom: -5px;
+    }
+}
+
+
+/* =========================
+   CELULARES PEQUENOS
+========================= */
+
+@media (max-width: 400px) {
+
+    .navbar {
+        padding: 12px 15px;
+        gap: 10px;
+    }
+
+    .logo {
+        width: 135px;
+        height: 65px;
+    }
+
+    .menu-center {
+        gap: 10px 18px;
+    }
+
+    .menu-center a {
+        font-size: 0.9rem;
+    }
 }

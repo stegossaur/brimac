@@ -84,7 +84,6 @@
 
 
 
-
 /* =========================
    PRODUTO
 ========================= */
@@ -130,22 +129,91 @@
 
 .produto-imagem {
     width: 80%;
+    height: 500px;
     display: flex;
     align-items: center;
     justify-content: center;
-    /* em vez de center */
-    height: 500px;
-    transition: .3s ease;
 }
 
-.produto-imagem img {
+.produto-carrossel { 
+    width: 100%; 
+    height: 450px; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center;
+    position: relative;
+}
+
+/* Setas */
+
+.produto-carrossel .anterior,
+.produto-carrossel .proxima {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+
+    border: none;
+    background: none;
+
+    color: #222;
+    font-size: 42px;
+    font-family: Arial, sans-serif;
+    font-weight: 300;
+    line-height: 1;
+
+    padding: 5px;
+    cursor: pointer;
+
+    z-index: 10;
+
+    transition: color .2s ease, opacity .2s ease;
+}
+
+.produto-carrossel .anterior {
+    left: 0;
+}
+
+.produto-carrossel .proxima {
+    right: 0;
+}
+
+.produto-carrossel .anterior:hover,
+.produto-carrossel .proxima:hover {
+    color: #B32626;
+}
+
+
+
+.carrossel-imagens {
+    width: 100%;
     height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.carrossel-imagens img {
+    max-width: 85%;
+    max-height: 400px;
+    width: auto;
+    height: auto;
     object-fit: contain;
-    object-position: left center;
+
     border: 1px solid #ececec;
     border-radius: 18px;
-    filter: drop-shadow(0 12px 20px rgba(0, 0, 0, 0.12)) drop-shadow(0 4px 8px rgba(0, 0, 0, 0.08));
+
+    filter:
+        drop-shadow(0 12px 20px rgba(0, 0, 0, 0.12))
+        drop-shadow(0 4px 8px rgba(0, 0, 0, 0.08));
+
+    display: none;
 }
+
+.carrossel-imagens img.ativa {
+    display: block;
+}
+
 
 /* Texto */
 .produto-info {
@@ -315,3 +383,279 @@
     }
 
 }
+
+ /* =========================
+    RESPONSIVO - TABLET
+ ========================= */
+
+ @media (max-width: 900px) {
+
+     .products-hero {
+         padding: 70px 40px;
+     }
+
+     .products-hero h1 {
+         font-size: 3rem;
+     }
+
+     .products-hero p {
+         font-size: 1rem;
+     }
+
+
+     .produto {
+         padding: 50px 6%;
+     }
+
+     .produto-container {
+         grid-template-columns: 1fr;
+         gap: 40px;
+     }
+
+
+     /* Imagem */
+
+     .produto-imagem {
+         width: 100%;
+         height: 450px;
+     }
+
+     .produto-carrossel {
+         width: 100%;
+         height: 420px;
+     }
+
+     .carrossel-imagens img {
+         max-width: 80%;
+         max-height: 380px;
+     }
+
+
+     /* Texto */
+
+     .produto-info {
+         width: 100%;
+     }
+
+
+     /* Especificações */
+
+     .spec-grid {
+         grid-template-columns: 1fr;
+     }
+ }
+
+
+ /* =========================
+    RESPONSIVO - CELULAR
+ ========================= */
+
+ @media (max-width: 600px) {
+
+     .products-hero {
+         padding: 55px 20px;
+     }
+
+     .products-hero h1 {
+         font-size: 2.4rem;
+         line-height: 1.15;
+     }
+
+     .products-hero p {
+         margin-top: 15px;
+         font-size: 1rem;
+         line-height: 1.5;
+     }
+
+
+     /* Produto */
+
+     .produto {
+         padding: 40px 20px;
+     }
+
+     .produto-container {
+         display: flex;
+         flex-direction: column;
+         gap: 30px;
+     }
+
+
+     /* Título do produto */
+
+     .produto > h1 {
+         font-size: 2rem;
+         line-height: 1.2;
+         margin-bottom: 25px;
+     }
+
+
+     /* Imagem */
+
+     .produto-imagem {
+         width: 100%;
+         height: 330px;
+     }
+
+     .produto-carrossel {
+         width: 100%;
+         height: 320px;
+     }
+
+
+     /* Imagens do carrossel */
+
+     .carrossel-imagens {
+         width: 100%;
+         height: 100%;
+     }
+
+     .carrossel-imagens img {
+         max-width: 78%;
+         max-height: 280px;
+         border-radius: 14px;
+     }
+
+
+     /* Setas */
+
+     .produto-carrossel .anterior,
+     .produto-carrossel .proxima {
+         font-size: 34px;
+         padding: 5px;
+     }
+
+     .produto-carrossel .anterior {
+         left: 0;
+     }
+
+     .produto-carrossel .proxima {
+         right: 0;
+     }
+
+
+     /* Informações */
+
+     .produto-info {
+         width: 100%;
+     }
+
+     .produto-info h2 {
+         font-size: 1.3rem;
+         margin-bottom: 15px;
+     }
+
+     .produto-info p {
+         font-size: 0.95rem;
+         line-height: 1.6;
+     }
+
+     .produto-info ul {
+         margin-top: 20px;
+     }
+
+     .produto-info li {
+         font-size: 0.95rem;
+         line-height: 1.5;
+         margin-bottom: 12px;
+     }
+
+
+     /* Botão */
+
+     .btn-produto {
+         margin-top: 20px;
+         padding: 11px 18px;
+     }
+
+
+     /* Especificações */
+
+     .especificacoes {
+         margin-top: 25px;
+         border-radius: 12px;
+     }
+
+     .especificacoes summary {
+         padding: 18px;
+         font-size: 1rem;
+     }
+
+     .spec-grid {
+         grid-template-columns: 1fr;
+         gap: 15px;
+         padding: 0 18px 20px;
+     }
+
+     .spec-grid div {
+         font-size: 0.9rem;
+         line-height: 1.5;
+     }
+ }
+
+
+ /* =========================
+    CELULARES PEQUENOS
+ ========================= */
+
+ @media (max-width: 400px) {
+
+     .products-hero {
+         padding: 45px 15px;
+     }
+
+     .products-hero h1 {
+         font-size: 2rem;
+     }
+
+     .products-hero p {
+         font-size: 0.9rem;
+     }
+
+
+     .produto {
+         padding: 35px 15px;
+     }
+
+
+     .produto > h1 {
+         font-size: 1.8rem;
+     }
+
+
+     .produto-imagem {
+         height: 290px;
+     }
+
+     .produto-carrossel {
+         height: 280px;
+     }
+
+     .carrossel-imagens img {
+         max-width: 75%;
+         max-height: 250px;
+     }
+
+
+     .produto-carrossel .anterior,
+     .produto-carrossel .proxima {
+         font-size: 30px;
+     }
+
+
+     .produto-info h2 {
+         font-size: 1.2rem;
+     }
+
+     .produto-info p,
+     .produto-info li {
+         font-size: 0.9rem;
+     }
+
+
+     .especificacoes summary {
+         padding: 16px;
+         font-size: 0.95rem;
+     }
+
+ }
